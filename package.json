@@ -1,0 +1,53 @@
+{
+  "name": "voidlang",
+  "displayName": "VoidLang",
+  "description": "Syntax highlighter for the Void programming language.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.76.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "void",
+        "aliases": [
+          "VoidLang",
+          "void"
+        ],
+        "extensions": [
+          ".void"
+        ],
+        "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "void-source",
+        "aliases": [
+          "VS"
+        ],
+        "extensions": [
+          ".vs"
+        ],
+        "icon": {
+          "light": "./icons/voidlang.png",
+          "dark": "./icons/voidlang.png"
+        },
+        "configuration": "./language-configuration-source.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "void",
+        "scopeName": "source.void",
+        "path": "./syntaxes/void.tmLanguage.json"
+      },
+      {
+        "language": "void-source",
+        "scopeName": "source.vs",
+        "path": "./syntaxes/voidlang.tmLanguage.json"
+      }
+    ]
+  }
+}

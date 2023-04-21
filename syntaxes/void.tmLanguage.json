@@ -1,0 +1,258 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "VoidLang",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#chars"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#booleans"
+		},
+		{
+			"include": "#sections"
+		},
+		{
+			"include": "#classes"
+		},
+		{
+			"include": "#methods"
+		},
+		{
+			"include": "#fields"
+		},
+		{
+			"include": "#types"
+		},
+		{
+			"include": "#modifiers"
+		},
+		{
+			"include": "#controls"
+		},
+		{
+			"include": "#flags"
+		}
+	],
+	"repository": {
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.void",
+					"match": ";(.*)"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "entity.other.attribute-name",
+					"match": "\\#(main|link|define)"
+				},
+				{
+					"name": "entity.other.attribute-name",
+					"match": "\\b(new|goto|exit|newarray|arraylength|catch|throw|athrow|delete|monitorenter|monitorexit|this|stacktrace|currenttime|nanotime|random|seed)\\b"
+				},
+				{
+					"name": "entity.other.attribute-name",
+					"match": "\\b(return|ireturn|freturn|dreturn|areturn)\\b"	
+				},
+				{
+					"name": "entity.other.attribute-name",
+					"match": "\\b(invokevirtual|invokedynamic|invokestatic|invokespecial)\\b"
+				},
+				{
+					"name": "entity.other.attribute-name",
+					"match": "\\b(getfield|getstatic|setfield|setstatic)\\b"
+				},
+				{
+					"name": "entity.other.attribute-name",
+					"match": "\\b(ifnull|ifnonnull|ifrefeq|ifrefneq|ifseq|ifsneq)\\b"
+				},
+				{
+					"name": "entity.other.attribute-name",
+					"match": "\\b(ifref==|ifref!=|ifs==|ifs!=)($|\\s)"
+				},
+				{
+					"name": "entity.other.attribute-name",
+					"match": "\\b(ifieq|ifineq|ifig|ifige|ifil|ifile)\\b"
+				},
+				{
+					"name": "entity.other.attribute-name",
+					"match": "\\b(ifi==|ifi!=|ifi>|ifi>=|ifi<|ifi<=)($|\\s)"
+				},
+				{
+					"name": "entity.other.attribute-name",
+					"match": "\\b(iffeq|iffneq|iffg|iffge|iffl|iffle|iff==|iff!=|iff>|iff>=|iff<|iff<=)\\b"
+				},
+				{
+					"name": "entity.other.attribute-name",
+					"match": "\\b(ifdeq|ifdneq|ifdg|ifdge|ifdl|ifdle|ifd==|ifd!=|ifd>|ifd>=|ifd<|ifd<=)\\b"
+				},
+				{
+					"name": "entity.other.attribute-name",
+					"match": "\\b(f2i|i2f)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.void",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.void",
+					"match": "\\\\."
+				}
+			]
+		},
+		"chars": {
+			"name": "string.quoted.double.void",
+			"begin": "'",
+			"end": "'",
+			"patterns": [
+				{
+					"name": "constant.character.escape.void",
+					"match": "\\\\."
+				}
+			]
+		},
+		"numbers": {
+			"patterns": [
+				{
+					"name": "constant.numeric",
+					"match": "\\b(-?[0-9]+\\d*([.]\\d+)?)\\b|^(-?0[.]\\d*[0-9]+)\\b|(0[xX][0-9a-fA-F]+)\\b"
+				}
+			]
+		},
+		"booleans": {
+			"patterns": [
+				{
+					"name": "constant.numeric",
+					"match": "\\b(true|false)\\b"
+				}
+			]
+		},
+		"sections": {
+			"patterns": [
+				{
+					"name": "constant.language",
+					"match": "\\:((\\w|-)+)"
+				}
+			]
+		},
+		"classes": {
+			"patterns": [
+				{
+					"name": "entity.name.class",
+					"match": "\\b(cdef|cmod|cext|cimpl|cbegin|cend)\\b"
+				}
+			]
+		},
+		"methods": {
+			"patterns": [
+				{
+					"name": "entity.name.method",
+					"match": "\\b(mdef|mmod|mreturn|mparam|mbegin|mend)\\b"
+				}
+			]
+		},
+		"fields": {
+			"patterns": [
+				{
+					"name": "entity.other.inherited-class",
+					"match": "\\b(fdef|fmod|ftype|fbegin|fend|sample)\\b"
+				}
+			]
+		},
+		"types": {
+			"patterns": [
+				{
+					"name": "entity.name.tag.void",
+					"match": "\\b(V|I|F|D|L|Z|B|S)\\b"
+				}
+			]
+		},
+		"modifiers": {
+			"patterns": [
+				{
+					"name": "entity.name.tag",
+					"match": "\\b(public|private|protected|static|final|synchronized|volatile|transient|native|unsafe|abstract|interface|annotation|enum|weak|strong)\\b"
+				}
+			]
+		},
+		"controls": {
+			"patterns": [
+				{
+					"name": "entity.name.function",
+					"match": "\\b(ipush|iload|istore|iset|iensure|iaload|iastore)\\b"
+				},
+				{
+					"name": "entity.name.function",
+					"match": "\\b(iadd|isub|imul|idiv|imod|iinc|idecr|ineg|ipop|idup|ialloc|iclearstack|idebug|istacksize|idumpstack)\\b"
+				},
+
+				{
+					"name": "entity.name.function",
+					"match": "\\b(lpush|lload|lstore|lstorew|laload|lastore)\\b"
+				},
+				{
+					"name": "entity.name.function",
+					"match": "\\b(ladd|lsub|lmul|ldiv|lmod|linc|ldecr|lneg|lpop|ldup|lalloc|lclearstack|ldebug|lstacksize|ldumpstack)\\b"
+				},
+
+				{
+					"name": "entity.name.function",
+					"match": "\\b(fpush|fload|fstore|fstorew|faload|fastore)\\b"
+				},
+				{
+					"name": "entity.name.function",
+					"match": "\\b(fadd|fsub|fmul|fdiv|fmod|finc|fdecr|fneg|fpop|fdup|falloc|fclearstack|fdebug|fstacksize|fdumpstack)\\b"
+				},
+
+				{
+					"name": "entity.name.function",
+					"match": "\\b(dpush|dload|dstore|dstorew|daload|dastore)\\b"
+				},
+				{
+					"name": "entity.name.function",
+					"match": "\\b(dadd|dsub|dmul|ddiv|dmod|dinc|ddecr|dneg|dpop|ddup|dalloc|dclearstack|ddebug|dstacksize|ddumpstack)\\b"
+				},
+				
+				{
+					"name": "entity.name.function",
+					"match": "\\b(zpush|zload|zstore|zstorew|zaload|zastore)\\b"
+				},
+				{
+					"name": "entity.name.function",
+					"match": "\\b(cpush|cload|cstore|cstorew|caload|castore)\\b"
+				},
+
+				{
+					"name": "entity.name.function",
+					"match": "\\b(aload|astore|apop|adup|adebug|astacksize|spush|sprint|sprintln|print|println|input|nullptr|aaload|aastore|agetaddr|asetaddr|aswapaddr)\\b"
+				}
+			]
+		},
+		"flags": {
+			"patterns": [
+				{
+					"name": "entity.name.tag.void",
+					"match": "\\-((\\w|-)+)"
+				}
+			]
+		}
+	},
+	"scopeName": "source.void"
+}
