@@ -129,7 +129,7 @@
 				},
 				{
 					"name": "keyword.other",
-					"match": "\\b(class|struct|enum|interface|\\@interface)\\b"
+					"match": "\\b(class|struct|enum|interface|type|\\@interface)\\b"
 				},
 				{
 					"name": "entity.name.type",
