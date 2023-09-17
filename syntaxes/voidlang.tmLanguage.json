@@ -272,6 +272,10 @@
 				{
 					"name": "constant.numeric",
 					"match": "\\b(true|false)\\b"
+				}, 
+				{
+					"name": "constant.numeric",
+					"match": "\\b(null|nullptr)\\b"
 				}
 			]
 		}
