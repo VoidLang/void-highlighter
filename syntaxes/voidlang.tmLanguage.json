@@ -110,6 +110,10 @@
 				{
 					"name": "keyword.other",
 					"match": "\\b(final|native|extern|volatile|transient|synchronized|async|const|unsafe|weak|strong|default)\\b"
+				},
+				{
+					"name": "keyword.other",
+					"match": "\\b(ref|deref|in|out)\\b"
 				}
 			]	
 		},
