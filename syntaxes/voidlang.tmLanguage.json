@@ -97,7 +97,7 @@
 			"patterns": [
 				{
 					"name": "constant.language",
-					"match": "\\b(if|else|for|while|switch|case|yield|loop|return|returnif|synchronized|goto|defer|await|with|try|catch|finally|package|import)\\b"
+					"match": "\\b(if|else|for|while|switch|case|yield|loop|return|returnif|synchronized|goto|defer|await|with|try|catch|finally|package|import|as)\\b"
 				}
 			]
 		},
