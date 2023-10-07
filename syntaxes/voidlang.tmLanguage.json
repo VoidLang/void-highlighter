@@ -271,6 +271,11 @@
 				},
 				{
 					"name": "constant.numeric",
+					"match": "u\\d+(?:_\\d+)*(?:\\.\\d+(?:_\\d+)*)?(?:[eE][+-]?\\d+)?[bBsSiIlLfFdD]?",
+					"scope": "constant.numeric"
+				},
+				{
+					"name": "constant.numeric",
 					"match": "\\b(true|false)\\b"
 				}, 
 				{
