@@ -121,7 +121,7 @@
 			"patterns": [
 				{
 					"name": "keyword.other",
-					"match": "\\b(let|mut|new|this|is|where)\\b"
+					"match": "\\b(let|mut|new|malloc|free|this|is|where)\\b"
 				},
 				{
 					"name": "keyword.other",
