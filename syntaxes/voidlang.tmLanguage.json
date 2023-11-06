@@ -262,16 +262,16 @@
 			"patterns": [
 				{
 					"name": "constant.numeric",
-					"match": "0[xX][\\da-fA-F]+"
+					"match": "\\b0[xX][\\da-fA-F]+\\b"
 				},
 				{
 					"name": "constant.numeric",
-					"match": "-?\\d+(?:_\\d+)*(?:\\.\\d+(?:_\\d+)*)?(?:[eE][+-]?\\d+)?[bBsSiIlLfFdD]?",
+					"match": "\\b-?\\d+(?:_\\d+)*(?:\\.\\d+(?:_\\d+)*)?(?:[eE][+-]?\\d+)?[bBsSiIlLfFdD]?\\b",
 					"scope": "constant.numeric"
 				},
 				{
 					"name": "constant.numeric",
-					"match": "u\\d+(?:_\\d+)*(?:\\.\\d+(?:_\\d+)*)?(?:[eE][+-]?\\d+)?[bBsSiIlLfFdD]?",
+					"match": "\\bu\\d+(?:_\\d+)*(?:\\.\\d+(?:_\\d+)*)?(?:[eE][+-]?\\d+)?[bBsSiIlLfFdD]?\\b",
 					"scope": "constant.numeric"
 				},
 				{
